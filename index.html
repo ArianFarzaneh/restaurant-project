@@ -5,9 +5,203 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="stylesheet" href="styles/style.css">
+
 </head>
 <body>
+    <div class="my-container">
+            <!-- pay section! -->
+            <div class="pay-section">
+                <div class="sum-orders display-flex">
+                    <div class="sum-of-order align-left" id="pureSum">0t</div>
+                    <div class="align-right">جمع کل سفارشات</div>
+                </div>
+                <div class="karmozd display-flex">
+                    <div id="karmozd5darsad" class="karmozd-vaule align-left">0t</div>
+                    <div class="align-right">حق سرویس و کارمزد</div>
+                </div>
+                <div class="discount display-flex">
+                    <div id="takhfifValue" class="karmozd-vaule align-left">0%</div>
+                    <div class="align-right">تخفیف</div>
+                </div>
+                <div class="input-group mb-3">
+                    <button class="add-discount-btn btn btn-outline-secondary" type="button" id="button-addon1"><img src="images/tick.png" alt="tick"></button>
+                    <input dir="rtl" type="text" id="discountInput" class="form-control" placeholder="کد تخفیف" aria-label="Example text with button addon" aria-describedby="button-addon1">
+                </div>
+                <div class="final-price-section display-flex">
+                    <div id="finalPriceValue" class="final-price-value align-left">0t</div>
+                    <div class="align-right">مبلغ قابل پرداخت</div>
+                </div>
+                <button class="final-submit-button">ثبت سفارش</button>
+            </div>
+            
+            <!-- select section! -->
+            <div class="select-section container">
+                <div class="select-section-title">رستوران مک دونالد شعبه تهران</div>
+                <div class="menu-container container">
+                    <div class="row">
+                        <div dir="rtl" class="col-sm-12 col-md-10 col-lg-5 my-2 menu-item">
+                            <div class="item-image">
+                                <img src="images/hamburger.png" alt="hamburger-photo">
+                            </div>
+                            <div class="item-info">
+                                <div class="item-title">همبرگر مخصوص</div>
+                                <div class="item-price">۱۰۰۰۰ تومان</div>
+                                <div class="item-counter display-flex">
+                                    <div class="plus-counter" id="specialHamburger"><img class="count-images" src="images/add.png" alt="plus"></div>
+                                    <div class="each-item-counter align-center" id="special-hamb-item-counter">0</div>
+                                    <div class="minus-counter" id="specialHamburger"><img class="count-images" src="images/minus.png" alt="minus"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div dir="rtl" class="col-12 col-md-10 col-lg-5 my-2 menu-item">
+                            <div class="item-image">
+                                <img src="images/hamburger.png" alt="hamburger-photo">
+                            </div>
+                            <div class="item-info">
+                                <div class="item-title">همبرگر معمولی</div>
+                                <div class="item-price">۸۰۰۰ تومان</div>
+                                <div class="item-counter display-flex">
+                                    <div class="plus-counter" id="normalHamburger"><img class="count-images" src="images/add.png" alt="plus"></div>
+                                    <div class="each-item-counter align-center" id="normal-hamb-item-counter">0</div>
+                                    <div class="minus-counter" id="normalHamburger"><img class="count-images" src="images/minus.png" alt="minus"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div dir="rtl" class="col-12 col-md-10 col-lg-5 my-2 menu-item">
+                            <div class="item-image">
+                                <img src="images/hamburger.png" alt="hamburger-photo">
+                            </div>
+                            <div class="item-info">
+                                <div class="item-title">همبرگر مخصوص با قارچ و پنیر</div>
+                                <div class="item-price">۲۰۰۰۰ تومان</div>
+                                <div class="item-counter display-flex">
+                                    <div class="plus-counter" id="spacialcheeseHamburger"><img class="count-images" src="images/add.png" alt="plus"></div>
+                                    <div class="each-item-counter align-center" id="special-cheese-hamb-item-counter">0</div>
+                                    <div class="minus-counter" id="spacialcheeseHamburger"><img class="count-images" src="images/minus.png" alt="minus"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div dir="rtl" class="col-12 col-md-10 col-lg-5 my-2 menu-item">
+                            <div class="item-image">
+                                <img src="images/hamburger.png" alt="hamburger-photo">
+                            </div>
+                            <div class="item-info">
+                                <div class="item-title">همبرگر معمولی با قارچ و پنیر</div>
+                                <div class="item-price">۱۰۰۰۰ تومان</div>
+                                <div class="item-counter display-flex">
+                                    <div class="plus-counter" id="cheeseHamburger"><img class="count-images" src="images/add.png" alt="plus"></div>
+                                    <div class="each-item-counter align-center" id="normal-cheese-hamb-item-counter">0</div>
+                                    <div class="minus-counter" id="cheeseHamburger"><img class="count-images" src="images/minus.png" alt="minus"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div dir="rtl" class="col-12 col-md-10 col-lg-5 my-2 menu-item">
+                            <div class="item-image">
+                                <img src="images/french_fries.png" alt="hamburger-photo">
+                            </div>
+                            <div class="item-info">
+                                <div class="item-title">سیب زمینی سرخ کرده</div>
+                                <div class="item-price">۱۰۰۰۰ تومان</div>
+                                <div class="item-counter display-flex">
+                                    <div class="plus-counter" id="friedPotato"><img class="count-images" src="images/add.png" alt="plus"></div>
+                                    <div class="each-item-counter align-center" id="fried-potato-item-counter">0</div>
+                                    <div class="minus-counter" id="friedPotato"><img class="count-images" src="images/minus.png" alt="minus"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div dir="rtl" class="col-12 col-md-10 col-lg-5 my-2 menu-item">
+                            <div class="item-image">
+                                <img src="images/french_fries.png" alt="hamburger-photo">
+                            </div>
+                            <div class="item-info">
+                                <div class="item-title">سیب زمینی سرخ کرده ویژه</div>
+                                <div class="item-price">۲۵۰۰۰ تومان</div>
+                                <div class="item-counter display-flex">
+                                    <div class="plus-counter" id="specialFriedPotato"><img class="count-images" src="images/add.png" alt="plus"></div>
+                                    <div class="each-item-counter align-center" id="special-fried-potato-item-counter">0</div>
+                                    <div class="minus-counter" id="specialFriedPotato"><img class="count-images" src="images/minus.png" alt="minus"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div dir="rtl" class="col-12 col-md-10 col-lg-5 my-2 menu-item">
+                            <div class="item-image">
+                                <img src="images/soda.png" alt="hamburger-photo">
+                            </div>
+                            <div class="item-info">
+                                <div class="item-title">نوشابه</div>
+                                <div class="item-price">۵۰۰۰ تومان</div>
+                                <div class="item-counter display-flex">
+                                    <div class="plus-counter" id="normalSoda"><img class="count-images" src="images/add.png" alt="plus"></div>
+                                    <div class="each-item-counter align-center" id="soda-item-counter">0</div>
+                                    <div class="minus-counter" id="normalSoda"><img class="count-images" src="images/minus.png" alt="minus"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div dir="rtl" class="col-12 col-md-10 col-lg-5 my-2 menu-item">
+                            <div class="item-image">
+                                <img src="images/soda.png" alt="hamburger-photo">
+                            </div>
+                            <div class="item-info">
+                                <div class="item-title">نوشابه رژیمی</div>
+                                <div class="item-price">۶۰۰۰ تومان</div>
+                                <div class="item-counter display-flex">
+                                    <div class="plus-counter" id="dietSoda"><img class="count-images" src="images/add.png" alt="plus"></div>
+                                    <div class="each-item-counter align-center" id="diet-soda-item-counter">0</div>
+                                    <div class="minus-counter" id="dietSoda"><img class="count-images" src="images/minus.png" alt="minus"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div dir="rtl" class="col-12 col-md-10 col-lg-5 my-2 menu-item">
+                            <div class="item-image">
+                                <img src="images/ceasar.png" alt="hamburger-photo">
+                            </div>
+                            <div class="item-info">
+                                <div class="item-title">سالاد سزار</div>
+                                <div class="item-price">۲۵۰۰۰ تومان</div>
+                                <div class="item-counter display-flex">
+                                    <div class="plus-counter" id="cesarSalad"><img class="count-images" src="images/add.png" alt="plus"></div>
+                                    <div class="each-item-counter align-center" id="cesar-salad-item-counter">0</div>
+                                    <div class="minus-counter" id="cesarSalad"><img class="count-images" src="images/minus.png" alt="minus"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div dir="rtl" class="col-12 col-md-10 col-lg-5 my-2 menu-item">
+                            <div class="item-image">
+                                <img src="images/ceasar.png" alt="hamburger-photo">
+                            </div>
+                            <div class="item-info">
+                                <div class="item-title">سالاد فصل</div>
+                                <div class="item-price">۸۰۰۰ تومان</div>
+                                <div class="item-counter display-flex">
+                                    <div class="plus-counter" id="seasonSalad"><img class="count-images" src="images/add.png" alt="plus"></div>
+                                    <div class="each-item-counter align-center" id="season-salad-item-counter">0</div>
+                                    <div class="minus-counter" id="seasonSalad"><img class="count-images" src="images/minus.png" alt="minus"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="my-modal">
+            <div class="modal-title">سفارش شما با موفقیت ثبت شد! </div>
+            <button class="modal-btn">باشه</button>
+        </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
     <script src="scripts/script.js"></script>
 </body>
 </html>
+<!-- break points:
+    /* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {...}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {...}
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {...}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {...}
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {...}
+ -->
