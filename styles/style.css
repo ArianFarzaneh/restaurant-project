@@ -30,6 +30,7 @@ body{
   flex-direction: row;
   justify-content: space-between;
   padding: 2%;
+  /* filter:brightness(30%) blur(8px) ; */
 }
 .pay-section{
   width: 30%;
