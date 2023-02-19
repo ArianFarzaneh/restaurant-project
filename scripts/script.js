@@ -175,15 +175,17 @@ discountBtn.addEventListener('click',(e)=>
 finalSubmitButton.addEventListener('click',(e)=>
 {
     e.preventDefault()
-    container.style.filter="blur(8px)"
+    container.classList.add("modal-blurer");//blur and brightness class
     modal.style.display="block"
+    // container.style.filter="blur(8px)"
 
 })
 modalBtn.addEventListener("click",(e)=>
 {
     e.preventDefault()
-    container.style.filter="none"
+    // container.style.filter="none"
     modal.style.display="none"
+    container.classList.remove("modal-blurer");
 })
 // const x=document.querySelector(".select-section")
 // const transfer = (e) => {

@@ -81,6 +81,9 @@ body{
 img{
   width: 100%;
 }
+.plus-counter:hover , .minus-counter:hover{
+  cursor: pointer;
+}
 .item-title{
   font-weight: bold;
 }
@@ -150,6 +153,9 @@ img{
   background-color: #f2f6ff;
   border-radius: 15px;
   display: none;
+}
+.modal-blurer{
+  filter: blur(8px)brightness(40%);
 }
 .modal-title{
   margin-bottom: 5%;
